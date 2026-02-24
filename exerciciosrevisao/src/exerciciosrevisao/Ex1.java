@@ -1,5 +1,6 @@
 package exerciciosrevisao;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Ex1 {
@@ -7,6 +8,8 @@ public class Ex1 {
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner (System.in);
+		
+		DecimalFormat df = new DecimalFormat("0.00");
 		
 		System.out.println("Informe sua matrícula: ");
 		String mat = scanner.next();
@@ -22,7 +25,7 @@ public class Ex1 {
 		
 		double salmen = (hr * valor) * 28;
 		
-		System.out.println("\nMatrícula: " + mat + "\nNome: " + nome + "\nSalário: R$ " + salmen);
+		System.out.println("\nMatrícula: " + mat + "\nNome: " + nome + "\nSalário: R$ " + df.format(salmen));
 	
 		scanner.close();
 

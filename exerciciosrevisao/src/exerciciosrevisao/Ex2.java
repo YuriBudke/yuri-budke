@@ -9,6 +9,8 @@ public class Ex2 {
 	
 		Scanner scanner = new Scanner (System.in);
 		
+		DecimalFormat df = new DecimalFormat("0.00");
+		
 		System.out.println("Informe o seu nome: ");
 		String nome = scanner.next();
 		
@@ -20,9 +22,9 @@ public class Ex2 {
 		
 		double comissao = (venda * 15) / 100;
 		double tsal = sal + comissao;
-		DecimalFormat df = new DecimalFormat("0.00");
+	
 		
-		System.out.println("O vendedor: " + nome + " irá receber o total de: R$" + df.format(tsal) + " no final do mês.");
+		System.out.println("O vendedor: " + nome + " irá receber o total de: R$ " + df.format(tsal) + " no final do mês.");
 		
 		scanner.close();
 
