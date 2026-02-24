@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\Usuario\Documents\GitHub\yuri-budke\aula2_-ava-12-02\.metadata\.plugins\org.eclipse.jdt.core
+4044167130.index
+1041974791.index
+1865797976.index
+2437791914.index
