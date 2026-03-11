@@ -1,9 +1,7 @@
 
 public class Ex1Pessoa {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+	String nome;
+	char sexo;
+	String data;
+	String estadoCivil;
 }
