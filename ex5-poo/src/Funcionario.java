@@ -5,7 +5,6 @@ public class Funcionario {
 	String nome;
 	String sobrenome;
 	double salariom;
-	double aumento;
 	
 	public double salarioAnual() {
 		return salariom * 12;
@@ -14,8 +13,11 @@ public class Funcionario {
 	public String nomeCompleto() {
 		return nome + " " +  sobrenome;
 	}
-	public double aumentoSal() {
-		return ((salariom * aumento) / 100) + salariom;
+	
+	public void modificarSalario(double percentualAumento) {
+		double aumento = salariom * percentualAumento / 100;
+		double salarioFinal = salariom + aumento;
+		salariom = salarioFinal;
 	}
 
 }
