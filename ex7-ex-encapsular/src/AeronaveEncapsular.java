@@ -18,17 +18,6 @@ public AeronaveEncapsular(String modelo, int passageiros, double velMax, double 
 		setCapComb (capComb);
 		setQueimaCombMin (queimaCombMin);
 	}
-
-
-
-
-//	alt + shift + s = Generate toString()
-	@Override
-	public String toString() {
-		return "Aeronave [modelo=" + modelo + ", passageiros=" + passageiros + ", velMax=" + velMax + ", capComb="
-				+ capComb + ", queimaCombMin=" + queimaCombMin + "]";
-	}
-	
 	
 	
 
@@ -131,5 +120,15 @@ public AeronaveEncapsular(String modelo, int passageiros, double velMax, double 
 	public double qualVoaMaisLonge() {
 		return mediaLitrosMinutos() * velMax;
 	}
+	
+	
+	
+//	alt + shift + s = Generate toString()
+	@Override
+	public String toString() {
+		return "Aeronave [modelo=" + modelo + ", passageiros=" + passageiros + ", velMax=" + velMax + ", capComb="
+				+ capComb + ", queimaCombMin=" + queimaCombMin + "]";
+	}
+	
 	
 }
