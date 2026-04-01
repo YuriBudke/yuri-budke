@@ -43,7 +43,7 @@ public class ImpostoDeRenda {
 	}
 
 	public void setUf(String uf) {
-		if (uf == null || uf.isBlank()) {
+		if (uf == null || uf.length() !=2) {
 			System.out.println("Erro, UF está vazio\n");
 		} else {
 			this.uf = uf;
@@ -62,18 +62,22 @@ public class ImpostoDeRenda {
 		}
 	}
 	
-	public double impostoPagar() {
-		if (rendaAnual >= 0 && rendaAnual <= 400) {
+	public double calcularAliquota() {
+		if (rendaAnual <= 400) {
 			return 0;
-		} else if (rendaAnual >= 4001 && rendaAnual <= 9000) {
-			return rendaAnual * 0.058;
-		} else if (rendaAnual >= 9001 && rendaAnual <= 25000) {
-			return rendaAnual * 0.15;
-		} else if (rendaAnual >= 25001 && rendaAnual <= 35000) {
-			return rendaAnual * 0.275;
+		} else if (rendaAnual <= 9000) {
+			return 0.058;
+		} else if (rendaAnual <= 25000) {
+			return 0.15;
+		} else if (rendaAnual <= 35000) {
+			return 0.275;
 		} else {
-			return rendaAnual * 3.33;
+			return 0.3;
 		}
+	}
+	
+	public double impostoPagar() {
+		return calcularAliquota() * rendaAnual;
 	}
 
 	@Override
